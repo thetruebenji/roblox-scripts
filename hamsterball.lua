@@ -69,6 +69,10 @@ local function setupHamsterSystem(character)
 		ball.Position = root.Position
 		humanoid.PlatformStand = true
 		Camera.CameraSubject = ball
+
+		ball.CanCollide = true
+		ball.Transparency = 1
+		if shell then shell.Transparency = 0.8 end
 	end
 
 	local function deactivateBallMode()
@@ -76,6 +80,10 @@ local function setupHamsterSystem(character)
 		ball.Velocity = Vector3.zero
 		ball.RotVelocity = Vector3.zero
 		Camera.CameraSubject = humanoid
+
+		ball.CanCollide = false
+		ball.Transparency = 1
+		if shell then shell.Transparency = 1 end
 	end
 
 	-- UI SETUP
@@ -172,11 +180,9 @@ local function setupHamsterSystem(character)
 		if UserInputService:GetFocusedTextBox() then return end
 
 		if braking then
-			-- Smooth brake: lerp velocities toward zero (keep Y velocity for gravity)
 			ball.Velocity = ball.Velocity:Lerp(Vector3.new(0, ball.Velocity.Y, 0), dt * 8)
 			ball.RotVelocity = ball.RotVelocity:Lerp(Vector3.new(0, 0, 0), dt * 8)
 		else
-			-- Normal control speed
 			local effectiveSpeed = speed
 
 			if UserInputService:IsKeyDown(Enum.KeyCode.W) then
@@ -229,11 +235,10 @@ end
 
 -- ON CHARACTER SPAWN
 player.CharacterAdded:Connect(function(char)
-	task.wait(1) -- Wait for character parts to settle
+	task.wait(1)
 	setupHamsterSystem(char)
 end)
 
--- If already loaded
 if player.Character then
 	setupHamsterSystem(player.Character)
 end
