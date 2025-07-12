@@ -5,7 +5,7 @@ local UserInputService = game:GetService("UserInputService")
 local Camera = workspace.CurrentCamera
 
 local player = Players.LocalPlayer
-local hamsterMode = true
+local hamsterMode = false -- START IN NORMAL MODE
 local speed = 30
 local jumpPower = 60
 local braking = false
@@ -38,7 +38,7 @@ local function setupHamsterSystem(character)
 	local shell = Instance.new("Part")
 	shell.Shape = Enum.PartType.Ball
 	shell.Size = ball.Size + Vector3.new(0.1, 0.1, 0.1)
-	shell.Transparency = 0.8
+	shell.Transparency = 1
 	shell.Anchored = false
 	shell.CanCollide = false
 	shell.Massless = true
@@ -102,7 +102,7 @@ local function setupHamsterSystem(character)
 	local toggleBtn = Instance.new("TextButton", frame)
 	toggleBtn.Size = UDim2.new(0.9, 0, 0, 30)
 	toggleBtn.Position = UDim2.new(0.05, 0, 0.05, 0)
-	toggleBtn.Text = "Mode: HamsterBall"
+	toggleBtn.Text = "Mode: Normal" -- Start in Normal mode
 	toggleBtn.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
 	toggleBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
 	toggleBtn.Font = Enum.Font.Gotham
@@ -229,8 +229,9 @@ local function setupHamsterSystem(character)
 		if ball then ball:Destroy() end
 	end)
 
-	-- INITIALIZE
-	activateBallMode()
+	-- INITIALIZE (don't auto-activate hamster mode)
+	-- hamsterMode is false by default
+	-- If user toggles it on via button, it will activate
 end
 
 -- ON CHARACTER SPAWN
