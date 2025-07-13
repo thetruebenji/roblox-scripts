@@ -94,6 +94,7 @@ makeButton("Infinite Yield", "https://raw.githubusercontent.com/EdgeIY/infinitey
 makeButton("Wisl's Project", "https://raw.githubusercontent.com/wisl884/wisl-i-Universal-Project1/main/Wisl'i%20Universal%20Project.lua")
 makeButton("AnnaBypasser", "https://raw.githubusercontent.com/AnnaRoblox/AnnaBypasser/refs/heads/main/AnnaBypasser.lua")
 makeButton("Superman Fly (R6)", "https://raw.githubusercontent.com/thetruebenji/roblox-scripts/main/supermanfly2.lua.txt")
+makeButton("Superman Fly (R15)", "https://raw.githubusercontent.com/thetruebenji/roblox-scripts/main/SupermanFlyR15.lua")
 makeButton("Hamsterball Roll", "https://raw.githubusercontent.com/thetruebenji/roblox-scripts/main/hamsterball.lua")
 makeButton("Hat Hub (Just a baseplate)", "https://raw.githubusercontent.com/inkdupe/hat-scripts/refs/heads/main/updatedhathub.lua")
 
