@@ -32,7 +32,7 @@ local scripts = {
 	{Name = "Superman Fly (R6)", URL = "https://raw.githubusercontent.com/thetruebenji/roblox-scripts/main/supermanfly2.lua.txt"},
 	{Name = "Superman Fly (R15)", URL = "https://raw.githubusercontent.com/thetruebenji/roblox-scripts/main/SupermanFlyR15.lua"},
 	{Name = "Hamsterball Roll", URL = "https://raw.githubusercontent.com/thetruebenji/roblox-scripts/main/hamsterball.lua"},
-	{Name = "Hat Hub (Just a baseplate)", URL = "https://raw.githubusercontent.com/inkdupe/hat-scripts/refs/heads/main/updatedhathub.lua"},
+	{Name = "Just a baseplate scripts", URL = "https://raw.githubusercontent.com/Zmain/v3.lua"},
 	{Name = "Aimlock V1", URL = "https://raw.githubusercontent.com/Exunys/Aimbot-V3/main/src/Aimbot.lua"}
 }
 
