@@ -34,7 +34,6 @@ local scripts = {
 	{Name = "Hamsterball Roll", URL = "https://raw.githubusercontent.com/thetruebenji/roblox-scripts/main/hamsterball.lua"},
 	{Name = "Just a baseplate scripts", URL = "https://raw.githubusercontent.com/Zmain/v3.lua"},
 	{Name = "Aimlock V1", URL = "https://raw.githubusercontent.com/Exunys/Aimbot-V3/main/src/Aimbot.lua"}
-        {Name = "Aimlock V1", URL = "https://0x0.st/8dix.lua"}
 
 }
 
